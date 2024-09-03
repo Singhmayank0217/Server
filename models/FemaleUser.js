@@ -23,6 +23,10 @@ const FemaleUserSchema = new Schema({
         type: String,
         required: true,
     },
+    locationAllowed: {
+        type: Boolean,
+        default: false,
+      },
     createdAt: {
         type: Date,
         default: Date.now,
