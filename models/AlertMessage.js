@@ -1,6 +1,4 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-
 
 const AlertMessageSchema = new Schema({
     femaleUser: {
@@ -42,7 +40,7 @@ const AlertMessageSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Volunteer',
         required: true,
-      }],
+    }],
 });
 
 module.exports = mongoose.model('AlertMessage', AlertMessageSchema);

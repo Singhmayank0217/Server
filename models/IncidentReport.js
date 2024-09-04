@@ -1,3 +1,5 @@
+const mongoose = require('mongoose');
+
 const IncidentReportSchema = new Schema({
     alertMessage: {
         type: Schema.Types.ObjectId,
