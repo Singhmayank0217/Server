@@ -13,6 +13,17 @@ const VolunteerSchema = new Schema({
         type: String,
         required: true,
     },
+    email: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    accountType: {
+        type: String,
+        enum: ['volunteer'],
+        default: 'volunteer',
+        required: true,
+    },
 });
 
 

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { type } = require('os');
 
 const FemaleUserSchema = new Schema({
     name: {
@@ -10,6 +11,10 @@ const FemaleUserSchema = new Schema({
         required: true,
     },
     parentsCoNumber: {
+        type: String,
+        required: true,
+    },
+    age: {
         type: String,
         required: true,
     },
@@ -25,7 +30,13 @@ const FemaleUserSchema = new Schema({
     locationAllowed: {
         type: Boolean,
         default: false,
-      },
+    },
+    accountType: {
+        type: String,
+        enum: ['femaleUser'],
+        default: 'femaleUser',
+        required: true,
+    },
     createdAt: {
         type: Date,
         default: Date.now,
